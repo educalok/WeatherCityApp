@@ -1,5 +1,6 @@
 import { CircularProgress, Slide, TextField } from '@mui/material'
 import { useEffect, useState } from 'react'
+
 import './App.css'
 
 function App () {
@@ -12,7 +13,9 @@ function App () {
   useEffect(() => {
     async function getCityWeather () {
       try {
-        const response = await fetch(`http://localhost:3001/api/${cityName}`)
+        const response = await fetch(
+          `${process.env.REACT_APP_URL_API + cityName}`
+        )
         if (response.status === 200) {
           error && setError(false)
           const weatherData = await response.json()
