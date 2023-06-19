@@ -9,6 +9,7 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .bg_img {
@@ -85,4 +86,8 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
