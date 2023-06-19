@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 function App () {
-  const [cityName, setCityName] = useState('Berlin')
+  const [cityName, setCityName] = useState('Copenhagen')
   const [inputText, setInputText] = useState('')
   const [data, setData] = useState({})
   const [error, setError] = useState(false)
